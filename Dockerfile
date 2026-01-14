@@ -5,6 +5,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY app.py test_app.py .
 
-CMD ["pytest", "-v", "test.py"]
+# Document ports (for humans + tools)
+EXPOSE 8080
+EXPOSE 9090
+
+# Default: run tests
+CMD ["pytest", "-v"]
