@@ -20,4 +20,4 @@ jobs:
 
       - name: Run tests
         run: |
-          docker run --rm python-port-app
+          docker run python-port-app
