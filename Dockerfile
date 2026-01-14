@@ -12,4 +12,4 @@ EXPOSE 8080
 EXPOSE 9090
 
 # Default: run tests
-CMD ["pytest", "-v"]
+CMD ["pytest", "-v", "test.py"]
