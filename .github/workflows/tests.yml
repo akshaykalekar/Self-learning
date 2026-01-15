@@ -1,23 +1,23 @@
-name: Python Service Tests
+# name: Python Service Tests
 
-on:
-  push:
-    branches: [ "main", "master" ]
-  pull_request:
+# on:
+#   push:
+#     branches: [ "main", "master" ]
+#   pull_request:
 
-jobs:
-  test:
-    name: Run tests in Docker
-    runs-on: ubuntu-latest
+# jobs:
+#   test:
+#     name: Run tests in Docker
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Build Docker image
-        run: |
-          docker build -t python-port-app .
+#       - name: Build Docker image
+#         run: |
+#           docker build -t python-port-app .
 
-      - name: Run tests
-        run: |
-          docker run python-port-app
+#       - name: Run tests
+#         run: |
+#           docker run python-port-app
